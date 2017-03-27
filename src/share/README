@@ -1,0 +1,2 @@
+This directory is for shared libraries.
+Library files used in rules or filters must be in this directory.
