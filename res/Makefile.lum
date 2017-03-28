@@ -1,0 +1,21 @@
+#
+# dependencies
+#
+MOD_CDEPS := $(MOD_COBJS:%.o=%.d)
+MOD_CXXDEPS := $(MOD_CXXOBJS:%.o=%.d)
+
+-include $(MOD_CDEPS)
+-include $(MOD_CXXDEPS)
+
+#
+# compile source files
+#
+$(MOD_COBJS): %.o: $(MOD_SRCDIR)/%.c
+	$(call print_cmd, "CC", $<)
+	@if [ ! -e `dirname $@` ]; then mkdir -p `dirname $@`; fi
+	@$(CC) -o $@ -c -MMD -MP $(CFLAGS) $<
+
+$(MOD_CXXOBJS): %.o: $(MOD_SRCDIR)/%.cpp
+	$(call print_cmd, "CXX", $<)
+	@if [ ! -e `dirname $@` ]; then mkdir -p `dirname $@`; fi
+	@$(CXX) -o $@ -c -MMD -MP -std=c++11 $(CFLAGS) $<
