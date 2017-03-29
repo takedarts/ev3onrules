@@ -16,11 +16,11 @@ namespace etrobo
  * 初期化処理を実行する。
  */
 Controller::Controller() :
-        _ruleManager(new RuleManager()),
-        _deviceManager(new DeviceManager()),
-        _filterManager(new FilterManager()),
-        _rule(_ruleManager->getRule(0)),
-        _initialize(true)
+    _ruleManager(new RuleManager()),
+    _deviceManager(new DeviceManager()),
+    _filterManager(new FilterManager()),
+    _rule(_ruleManager->getRule(0)),
+    _initialize(true)
 {
 }
 

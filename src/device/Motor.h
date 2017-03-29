@@ -70,6 +70,11 @@ public:
   virtual ~Motor();
 
   /**
+   * キャッシュとして保存されているデータを消去する。
+   */
+  void clearCache();
+
+  /**
    * モーターの回転角度の計測値を0に設定する。
    */
   void resetCount();
@@ -108,6 +113,28 @@ public:
    * @param blocking 回転終了まで待機するならtrue
    */
   void setRotate(int32_t degree, uint32_t power, bool blocking = false);
+
+private:
+  /**
+   * モーターの回転角度のキャッシュが保存されているならTrue。
+   */
+  bool _cacheCount;
+
+  /**
+   * モーターの回転力のキャッシュが保存されているならTrue。
+   */
+  bool _cachePower;
+
+  /**
+   * モーターの回転角度。
+   */
+  int32_t _count;
+
+  /**
+   * モーターの回転力。
+   */
+  int32_t _power;
+
 };
 
 } // namespace etrobo

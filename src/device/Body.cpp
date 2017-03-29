@@ -12,6 +12,26 @@ namespace etrobo
 {
 
 /**
+ * 初期化処理を実行する。
+ */
+Body::Body() :
+    _cacheBatteryVoltage(false),
+    _cacheBatteryCurrent(false),
+    _batteryVoltage(0),
+    _batteryCurrent(0)
+{
+}
+
+/**
+ * キャッシュとして保存されているデータを消去する。
+ */
+void Body::clearCache()
+{
+  _cacheBatteryVoltage = false;
+  _cacheBatteryCurrent = false;
+}
+
+/**
  * 現在のシステム時間を返す。
  * @return システム時間
  */
@@ -43,7 +63,12 @@ uint64_t Body::getProcessTime()
  */
 uint32_t Body::getBatteryVoltage()
 {
-  return ev3_battery_voltage_mV();
+  if (!_cacheBatteryVoltage) {
+    _batteryVoltage = ev3_battery_voltage_mV();
+    _cacheBatteryVoltage = true;
+  }
+
+  return _batteryVoltage;
 }
 
 /**
@@ -52,7 +77,12 @@ uint32_t Body::getBatteryVoltage()
  */
 uint32_t Body::getBatteryCurrent()
 {
-  return ev3_battery_current_mA();
+  if (!_cacheBatteryCurrent) {
+    _batteryCurrent = ev3_battery_current_mA();
+    _cacheBatteryCurrent = true;
+  }
+
+  return _batteryCurrent;
 }
 
 /**

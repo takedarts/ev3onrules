@@ -40,6 +40,11 @@ public:
   virtual ~Sensor() = default;
 
   /**
+   * キャッシュとして保存されているデータを消去する。
+   */
+  void clearCache();
+
+  /**
    * ジャイロセンサで観測した角速度を返す。
    * @return 角速度(単位は度)
    */
@@ -79,6 +84,67 @@ public:
    * @return タッチセンサが押されていればtrue
    */
   bool isTouchPressed();
+
+private:
+  /**
+   * ジャイロセンサで観測した角速度のキャッシュされているならtrue。
+   */
+  bool _cacheGyroRate;
+
+  /**
+   * ジャイロセンサで観測した角度のキャッシュされているならtrue。
+   */
+  bool _cacheGyroAngle;
+
+  /**
+   * 光センサで観測した環境光の強さのキャッシュされているならtrue。
+   */
+  bool _cacheLightAmbient;
+
+  /**
+   * 光センサで観測したLEDライトの反射光の強さのキャッシュされているならtrue。
+   */
+  bool _cacheLightReflect;
+
+  /**
+   * 超音波センサで観測した距離のキャッシュされているならtrue。
+   */
+  bool _cacheSonarDistance;
+
+  /**
+   * タッチセンサの状態がキャッシュされているならtrue。
+   */
+  bool _cacheTouchPressed;
+
+  /**
+   * ジャイロセンサで観測した角速度。
+   */
+  int16_t _gyroRate;
+
+  /**
+   * ジャイロセンサで観測した角度。
+   */
+  int16_t _gyroAngle;
+
+  /**
+   * 光センサで観測した環境光の強さ。
+   */
+  uint8_t _lightAmbient;
+
+  /**
+   * 光センサで観測したLEDライトの反射光の強さ。
+   */
+  uint8_t _lightReflect;
+
+  /**
+   * 超音波センサで観測した距離。
+   */
+  int16_t _sonarDistance;
+
+  /**
+   * タッチセンサが押されていればtrue。
+   */
+  bool _touchPressed;
 };
 
 } // namespace etrobo

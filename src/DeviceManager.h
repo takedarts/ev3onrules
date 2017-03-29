@@ -75,6 +75,11 @@ public:
   virtual ~DeviceManager() = default;
 
   /**
+   * キャッシュとして保存されているデータを消去する。
+   */
+   void clearCache();
+
+  /**
    * 通信処理を実行するオブジェクトを返す。
    * @return デバイス制御オブジェクト
    */

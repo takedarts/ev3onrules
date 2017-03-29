@@ -14,13 +14,25 @@ namespace etrobo
  * 初期化処理を実行する。
  */
 DeviceManager::DeviceManager() :
-        _communicator(new Communicator()),
-        _body(new Body()),
-        _sensor(new Sensor()),
-        _leftMotor(new Motor(Motor::Type::LEFT)),
-        _rightMotor(new Motor(Motor::Type::RIGHT)),
-        _backMotor(new Motor(Motor::Type::BACK))
+    _communicator(new Communicator()),
+    _body(new Body()),
+    _sensor(new Sensor()),
+    _leftMotor(new Motor(Motor::Type::LEFT)),
+    _rightMotor(new Motor(Motor::Type::RIGHT)),
+    _backMotor(new Motor(Motor::Type::BACK))
 {
+}
+
+/**
+ * キャッシュとして保存されているデータを消去する。
+ */
+void DeviceManager::clearCache()
+{
+  _body->clearCache();
+  _sensor->clearCache();
+  _leftMotor->clearCache();
+  _rightMotor->clearCache();
+  _backMotor->clearCache();
 }
 
 /**
