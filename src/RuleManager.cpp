@@ -43,10 +43,10 @@ Rule* RuleManager::getRule(uint32_t number)
 {
   auto it = _ruleMap.find(number);
 
-  if(it != _ruleMap.end()){
+  if (it != _ruleMap.end()) {
     return it->second;
   }
-  else{
+  else {
     return nullptr;
   }
 }
