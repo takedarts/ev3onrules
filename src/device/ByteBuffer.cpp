@@ -19,10 +19,10 @@ namespace etrobo
  * @param size バッファの大きさ
  */
 ByteBuffer::ByteBuffer(uint32_t size) :
-        _buffer(new uint8_t[size]),
-        _size(size),
-        _offset(0),
-        _length(0)
+    _buffer(new uint8_t[size]),
+    _size(size),
+    _offset(0),
+    _length(0)
 {
 }
 

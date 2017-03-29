@@ -25,21 +25,6 @@ Controller::Controller() :
 }
 
 /**
- * 制御を開始できる状態ならtrueを返す。
- * @return 制御可能ならtrue
- */
-bool Controller::isReady()
-{
-#if COMMUNICATION == 1
-  if (_deviceManager->getCommunicator()->isEnabled()) {
-    return _deviceManager->getCommunicator()->isConnected();
-  }
-#endif
-
-  return true;
-}
-
-/**
  * 制御処理を実行する。
  * 制御を継続して実行する場合はtrueを返す。
  * @return 制御を継続する場合はtrue

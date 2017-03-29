@@ -70,12 +70,6 @@ public:
   virtual ~Controller() = default;
 
   /**
-   * 制御を開始できる状態ならtrueを返す。
-   * @return 制御可能ならtrue
-   */
-  bool isReady();
-
-  /**
    * 制御処理を実行する。
    * 制御を継続して実行する場合はtrueを返す。
    * @return 制御を継続する場合はtrue

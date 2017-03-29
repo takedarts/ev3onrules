@@ -17,7 +17,8 @@ namespace etrobo
  * 初期化処理を実行する。
  */
 Communicator::Communicator() :
-        _buffer(new ByteBuffer(BUFFER_SIZE))
+    _buffer(new ByteBuffer(BUFFER_SIZE)),
+    _closed(false)
 {
 }
 
@@ -52,6 +53,8 @@ bool Communicator::isConnected()
  */
 void Communicator::close()
 {
+  _closed = true;
+
   if (bluetooth_is_connected()) {
     bluetooth_close();
   }
@@ -89,19 +92,21 @@ int32_t Communicator::write(const uint8_t* data, uint32_t length)
  */
 void Communicator::communicate()
 {
-  while (true) {
+  while (!_closed) {
     // 接続確認
     if (!bluetooth_is_connected()) {
-      break;
+      tslp_tsk(100);
+      continue;
     }
 
     // 受信
     uint8_t datum;
     uint32_t size = bluetooth_receive(&datum, 1);
 
-    // 通信終了
+    // 通信切断
     if (size == 0) {
-      break;
+      tslp_tsk(100);
+      continue;
     }
 
     // バッファに登録

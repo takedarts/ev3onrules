@@ -70,11 +70,6 @@ void boot()
 
   controller = ptr.get();
 
-  // 準備完了まで待機
-  while (!controller->isReady()) {
-    tslp_tsk(10);
-  }
-
   // 動作開始
   start();
 

@@ -85,6 +85,11 @@ public:
    */
   void communicate();
 
+private:
+  /**
+   * 通信処理が終了していればtrue。
+   */
+  bool _closed;
 };
 
 } // namespace etrobo
