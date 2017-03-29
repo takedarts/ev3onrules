@@ -16,7 +16,11 @@ namespace etrobo
  * 初期化処理を実行する。
  * @param type 接続位置
  */
-Motor::Motor(Type type)
+Motor::Motor(Type type) :
+    _cacheCount(false),
+    _cachePower(false),
+    _count(0),
+    _power(0)
 {
   if (type == Type::LEFT) {
     _port = LEFT_MOTOR_PORT;
@@ -42,11 +46,21 @@ Motor::~Motor()
 }
 
 /**
+ * キャッシュとして保存されているデータを消去する。
+ */
+void Motor::clearCache()
+{
+  _cacheCount = false;
+  _cachePower = false;
+}
+
+/**
  * モーターの回転角度の計測値を0に設定する。
  */
 void Motor::resetCount()
 {
   ev3_motor_reset_counts(_port);
+  _cacheCount = false;
 }
 
 /**
@@ -56,7 +70,12 @@ void Motor::resetCount()
  */
 int32_t Motor::getCount()
 {
-  return ev3_motor_get_counts(_port);
+  if (!_cacheCount) {
+    _count = ev3_motor_get_counts(_port);
+    _cacheCount = true;
+  }
+
+  return _count;
 }
 
 /**
@@ -66,7 +85,12 @@ int32_t Motor::getCount()
  */
 int32_t Motor::getPower()
 {
-  return ev3_motor_get_power(_port);
+  if (!_cachePower) {
+    _power = ev3_motor_get_power(_port);
+    _cachePower = true;
+  }
+
+  return _power;
 }
 
 /**

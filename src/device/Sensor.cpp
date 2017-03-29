@@ -15,7 +15,19 @@ namespace etrobo
 /**
  * 初期化処理を実行する。
  */
-Sensor::Sensor()
+Sensor::Sensor() :
+    _cacheGyroRate(false),
+    _cacheGyroAngle(false),
+    _cacheLightAmbient(false),
+    _cacheLightReflect(false),
+    _cacheSonarDistance(false),
+    _cacheTouchPressed(false),
+    _gyroRate(0),
+    _gyroAngle(0),
+    _lightAmbient(0),
+    _lightReflect(0),
+    _sonarDistance(0),
+    _touchPressed(false)
 {
   // センサを接続
   ev3_sensor_config(GYRO_SENSOR_PORT, GYRO_SENSOR);
@@ -28,12 +40,30 @@ Sensor::Sensor()
 }
 
 /**
+ * キャッシュとして保存されているデータを消去する。
+ */
+void Sensor::clearCache()
+{
+  _cacheGyroRate = false;
+  _cacheGyroAngle = false;
+  _cacheLightAmbient = false;
+  _cacheLightReflect = false;
+  _cacheSonarDistance = false;
+  _cacheTouchPressed = false;
+}
+
+/**
  * ジャイロセンサで観測した角速度を返す。
  * @return 角速度(単位は度)
  */
 int16_t Sensor::getGyroRate()
 {
-  return ev3_gyro_sensor_get_rate(GYRO_SENSOR_PORT);
+  if (!_cacheGyroRate) {
+    _gyroRate = ev3_gyro_sensor_get_rate(GYRO_SENSOR_PORT);
+    _cacheGyroRate = true;
+  }
+
+  return _gyroRate;
 }
 
 /**
@@ -42,7 +72,12 @@ int16_t Sensor::getGyroRate()
  */
 int16_t Sensor::getGyroAngle()
 {
-  return ev3_gyro_sensor_get_angle(GYRO_SENSOR_PORT);
+  if (!_cacheGyroAngle) {
+    _gyroAngle = ev3_gyro_sensor_get_angle(GYRO_SENSOR_PORT);
+    _cacheGyroAngle = true;
+  }
+
+  return _gyroAngle;
 }
 
 /**
@@ -51,6 +86,8 @@ int16_t Sensor::getGyroAngle()
 void Sensor::resetGyro()
 {
   ev3_gyro_sensor_reset(GYRO_SENSOR_PORT);
+  _cacheGyroAngle = false;
+  _cacheGyroRate = false;
 }
 
 /**
@@ -59,7 +96,12 @@ void Sensor::resetGyro()
  */
 uint8_t Sensor::getLightAmbient()
 {
-  return ev3_color_sensor_get_ambient(LIGHT_SENSOR_PORT);
+  if (!_cacheLightAmbient) {
+    _lightAmbient = ev3_color_sensor_get_ambient(LIGHT_SENSOR_PORT);
+    _cacheLightAmbient = true;
+  }
+
+  return _lightAmbient;
 }
 
 /**
@@ -68,7 +110,12 @@ uint8_t Sensor::getLightAmbient()
  */
 uint8_t Sensor::getLightReflect()
 {
-  return ev3_color_sensor_get_reflect(LIGHT_SENSOR_PORT);
+  if (!_cacheLightReflect) {
+    _lightReflect = ev3_color_sensor_get_reflect(LIGHT_SENSOR_PORT);
+    _cacheLightReflect = true;
+  }
+
+  return _lightReflect;
 }
 
 /**
@@ -77,7 +124,12 @@ uint8_t Sensor::getLightReflect()
  */
 int16_t Sensor::getSonarDistance()
 {
-  return ev3_ultrasonic_sensor_get_distance(SONAR_SENSOR_PORT);
+  if (!_cacheSonarDistance) {
+    _sonarDistance = ev3_ultrasonic_sensor_get_distance(SONAR_SENSOR_PORT);
+    _cacheSonarDistance = true;
+  }
+
+  return _sonarDistance;
 }
 
 /**
@@ -86,12 +138,18 @@ int16_t Sensor::getSonarDistance()
  */
 bool Sensor::isTouchPressed()
 {
-  if (ev3_touch_sensor_is_pressed(TOUCH_SENSOR_PORT)) {
-    return true;
+  if (!_cacheTouchPressed) {
+    if (ev3_touch_sensor_is_pressed(TOUCH_SENSOR_PORT)) {
+      _touchPressed = true;
+    }
+    else {
+      _touchPressed = false;
+    }
+
+    _cacheTouchPressed = true;
   }
-  else {
-    return false;
-  }
+
+  return _touchPressed;
 }
 
 } // namespace etrobo

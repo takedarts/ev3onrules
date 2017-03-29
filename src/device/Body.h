@@ -87,7 +87,7 @@ public:
   /**
    * 初期化処理を実行する。
    */
-  Body() = default;
+  Body();
 
   /**
    * オブジェクトの複製を禁止。
@@ -103,6 +103,11 @@ public:
    * 終了処理を実行する。
    */
   virtual ~Body() = default;
+
+  /**
+   * キャッシュとして保存されているデータを消去する。
+   */
+  void clearCache();
 
   /**
    * 現在のシステム時間を返す。
@@ -165,6 +170,27 @@ public:
    * @param y 出力座標(Y座標)
    */
   void drawLcdInt(int64_t val, uint8_t num, int32_t x, int32_t y);
+
+private:
+  /**
+   * バッテリの電圧のキャッシュが保存されているならTrue。
+   */
+  bool _cacheBatteryVoltage;
+
+  /**
+   * バッテリの電流のキャッシュが保存されているならTrue。
+   */
+  bool _cacheBatteryCurrent;
+
+  /**
+   * バッテリの電圧。
+   */
+  uint32_t _batteryVoltage;
+
+  /**
+   * バッテリの電流。
+   */
+  uint32_t _batteryCurrent;
 };
 
 } // namespace etrobo
