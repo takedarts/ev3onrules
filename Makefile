@@ -8,15 +8,11 @@
 #
 # Set path of EV3RT(hrp2) directory
 EV3RT_DIR := hrp2
-EV3RT_DIR := $(realpath $(EV3RT_DIR))
 
 # Include configurations of EV3RT SDK
 include $(EV3RT_DIR)/sdk/Makefile.sdk.conf
 
 # Paths
-LIBKERNEL_DIR := $(EV3RT_DIR)/sdk/$(EV3RT_LIBKERNEL_DIR)
-TARGETDIR     := $(KERNELDIR)/target/ev3_gcc
-
 OBJ_DIR  := $(CURDIR)/build
 SRC_DIR  := $(CURDIR)/src
 RES_DIR  := $(CURDIR)/res
