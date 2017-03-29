@@ -87,7 +87,7 @@ sub make_makefile_lum {
   }
   
   while(<$in>){
-    ~s/(\$\(OBJFILE\): \$\(\CFG_OUT_SRCS\) \$\(ALL_OBJS\) \$\(ALL_CXXOBJS\))/$1 \$\(MOD_COBJS\) \$\(MOD_CXXOBJS\)/; 
+    ~s/(\$\(OBJFILE\): \$\(CFG_OUT_SRCS\) \$\(ALL_OBJS\) \$\(ALL_CXXOBJS\))/$1 \$\(MOD_COBJS\) \$\(MOD_CXXOBJS\)/; 
     ~s/(\@\$\(LINK\) \$\(LDFLAGS\) -o \$\(OBJFILE\) \$\(ALL_OBJS\) \$\(ALL_CXXOBJS\))/$1 \$\(MOD_COBJS\) \$\(MOD_CXXOBJS\)/; 
     print $out $_;
   }
