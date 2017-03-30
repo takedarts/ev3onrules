@@ -31,6 +31,9 @@ Controller::Controller() :
  */
 bool Controller::run()
 {
+  // 前回のキャッシュを消去
+  _deviceManager->clearCache();
+
   // フィルタの処理を実行
   _filterManager->perform(_deviceManager.get());
 
