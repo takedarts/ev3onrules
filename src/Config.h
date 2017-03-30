@@ -11,7 +11,7 @@
 // 制御実行の間隔(単位:ms)
 #define INTERVAL       5
 
-// 1を設定していたら、通信できる状態になるまで待機する
-#define COMMUNICATION  0
+// Bluetooth通信をサポートするなら1。
+#define COMMUNICATION  1
 
 #endif /* CONFIG_H_ */
