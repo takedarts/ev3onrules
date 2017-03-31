@@ -58,17 +58,8 @@ sub make_makefile_app {
   $ev3rt_dir = File::Spec->abs2rel($ev3rt_dir, $obj_dir);
 
   while(<$in>){
-    ~s/KERNELDIR = \@\(SRCDIR\)/KERNELDIR = ${ev3rt_dir}/;
-    ~s/APPLDIR   = \@\(APPLDIR\)/APPLDIR   = ${src_dir}/;
-    ~s/include ..\/common\/Makefile.prj.common/include Makefile.prj/;
-    ~s/COPTS \+= \@\(COPTS\)/COPTS += -DBUILD_MODULE/;
-    ~s/INCLUDES \+= -I\@\(APPLDIR\)/INCLUDES += -I${src_dir}/;
-    ~s/-I\@\(APPLDIR\)\/..\/common/-I${ev3rt_dir}\/sdk\/common/;
-    ~s/MODCFG = \@\(APPLDIR\)\/app.cfg/MODCFG = app.cfg/;
-    ~s/include \@\(APPLDIR\)\/Makefile.inc/include Makefile.inc/;
-    ~s/APPL_CXXOBJS \+= app.o \@\(APPLOBJS\)/APPL_CXXOBJS \+=/;
-    ~s/MODOBJS \+= app.o \@\(APPLOBJS\)/MODOBJS \+=/;
-    ~s/include \$\(LOADERDIR\)\/app\/Makefile.lum/include Makefile.lum/;
+    ~s/\@\(SRC_DIR\)/${src_dir}/;
+    ~s/\@\(EV3RT_DIR\)/${ev3rt_dir}/;
     print $out $_;
   }
 
@@ -77,15 +68,11 @@ sub make_makefile_app {
 }
 
 sub make_makefile_lum {
-  my ($src, $dst, $tmp) = @_;
+  my ($src, $dst) = @_;
   my $in, $out, $add;
 
   if(!open($in, $src)){
     die "can't open file: $src";
-  }
-
-  if(!open($add, "$tmp")){
-    die "can't open file: $tmp";
   }
 
   if(!open($out, ">$dst")){
@@ -93,17 +80,10 @@ sub make_makefile_lum {
   }
 
   while(<$in>){
-    ~s/(\$\(OBJFILE\): \$\(CFG_OUT_SRCS\) \$\(ALL_OBJS\) \$\(ALL_CXXOBJS\))/$1 \$\(MOD_COBJS\) \$\(MOD_CXXOBJS\)/;
-    ~s/(\@\$\(LINK\) \$\(LDFLAGS\) -o \$\(OBJFILE\) \$\(ALL_OBJS\) \$\(ALL_CXXOBJS\))/$1 \$\(MOD_COBJS\) \$\(MOD_CXXOBJS\)/;
-    print $out $_;
-  }
-
-  while(<$add>){
     print $out $_;
   }
 
   close($in);
-  close($add);
   close($out);
 }
 
@@ -122,11 +102,7 @@ sub make_makefile_prj {
   $ev3rt_dir = File::Spec->abs2rel($ev3rt_dir, $obj_dir);
 
   while(<$in>){
-    ~s/EV3RT_SDK_COM_DIR := \$\(.+\)/EV3RT_SDK_COM_DIR := ${ev3rt_dir}\/sdk\/common/g;
-    ~s/EV3RT_SDK_API_DIR := \$\(.+\)/EV3RT_SDK_API_DIR := ${ev3rt_dir}\/sdk\/common\/ev3api/;
-    ~s/EV3RT_SDK_LIB_DIR := \$\(.+\)/EV3RT_SDK_LIB_DIR := ${ev3rt_dir}\/sdk\/common\/library/;
-    ~s/(INCLUDES \+= \$\(foreach)/# $1/;
-    ~s/(APPL_DIR \+= \$\(foreach)/# $1/;
+    ~s/\@\(EV3RT_DIR\)/${ev3rt_dir}/;
     print $out $_;
   }
 
@@ -180,19 +156,18 @@ sub run {
 
   my $makefile_inc_src = "${res_dir}/Makefile.inc";
   my $makefile_inc_dst = "${obj_dir}/Makefile.inc";
-  my $makefile_app_src = "${ev3rt_dir}/sdk/common/Makefile.app";
+  my $makefile_app_src = "${res_dir}/Makefile.app";
   my $makefile_app_dst = "${obj_dir}/Makefile.app";
-  my $makefile_lum_src = "${ev3rt_dir}/target/ev3_gcc/dmloader/app/Makefile.lum";
+  my $makefile_lum_src = "${res_dir}/Makefile.lum";
   my $makefile_lum_dst = "${obj_dir}/Makefile.lum";
-  my $makefile_lum_tmp = "${res_dir}/Makefile.lum";
-  my $makefile_prj_src = "${ev3rt_dir}/sdk/common/Makefile.prj.common";
+  my $makefile_prj_src = "${res_dir}/Makefile.prj";
   my $makefile_prj_dst = "${obj_dir}/Makefile.prj";
   my $cfgfile_src = "${res_dir}/app.cfg";
   my $cfgfile_dst = "${obj_dir}/app.cfg";
 
   make_makefile_inc($makefile_inc_src, $makefile_inc_dst, $src_dir, $obj_dir, \@c_objs, \@cpp_objs);
   make_makefile_app($makefile_app_src, $makefile_app_dst, $src_dir, $obj_dir, $ev3rt_dir);
-  make_makefile_lum($makefile_lum_src, $makefile_lum_dst, $makefile_lum_tmp);
+  make_makefile_lum($makefile_lum_src, $makefile_lum_dst);
   make_makefile_prj($makefile_prj_src, $makefile_prj_dst, $obj_dir, $ev3rt_dir);
   make_cfgfile($cfgfile_src, $cfgfile_dst, \@c_objs, \@cpp_objs);
 }
