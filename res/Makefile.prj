@@ -1,0 +1,50 @@
+#
+# Makefile for a Loadable User Module for EV3onRules
+#
+# Edited by Atsushi TAKEDA ( https://github.com/takedarts/ev3onrules )
+# An original file is in TOPPERS/EV3RT version beta6-3
+#   created by TOPPERS project ( https://www.toppers.jp/ )
+#
+
+#
+# This Makefile includes the common part to build an EV3RT project.
+#
+# Input:
+# $(APPLDIR)
+#
+# Output:
+# $(EV3RT_SDK_COM_DIR)
+# $(EV3RT_SDK_API_DIR)
+# $(EV3RT_SDK_LIB_DIR)
+# $(APPL_DIR) (update)
+# $(INCLUDES) (update)
+#
+
+this_abs_dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+get_relpath = $(shell perl -MFile::Spec -e "print File::Spec->abs2rel(q($1),q($2))")
+
+#
+# $(EV3RT_SDK_COM_DIR)
+# app_common.cfg
+#
+EV3RT_SDK_COM_DIR := @(EV3RT_DIR)/sdk/common/
+INCLUDES += -I$(EV3RT_SDK_COM_DIR)
+
+#
+# EV3RT C Language API
+#
+EV3RT_SDK_API_DIR := $(EV3RT_SDK_COM_DIR)/ev3api
+APPL_DIR += $(EV3RT_SDK_API_DIR)/src
+INCLUDES += -I$(EV3RT_SDK_API_DIR) -I$(EV3RT_SDK_API_DIR)/include
+include $(EV3RT_SDK_API_DIR)/Makefile
+
+#
+# Static libraries
+#
+EV3RT_SDK_LIB_DIR := $(EV3RT_SDK_COM_DIR)/library
+
+#
+# Add include/ and src/ under application directory to search path
+#
+#INCLUDES += $(foreach dir,$(shell find $(APPLDIR) -type d -name include),-I$(dir))
+#APPL_DIR += $(foreach dir,$(shell find $(APPLDIR) -type d -name src),$(dir))
