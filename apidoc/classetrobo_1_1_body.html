@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EV3 on Rules: etrobo::Body クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EV3 on Rules
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">Rule-base framework for EV3RT</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>etrobo</b></li><li class="navelem"><a class="el" href="classetrobo_1_1_body.html">Body</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classetrobo_1_1_body-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">etrobo::Body クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_body_8h_source.html">Body.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:afbdfa0648245919af43c1937959d4d36"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36">Button</a> { <br />
+&#160;&#160;<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36a684d325a7303f52e64011467ff5c5758">Button::LEFT</a> = LEFT_BUTTON, 
+<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36a21507b40c80068eda19865706fdc2403">Button::RIGHT</a> = RIGHT_BUTTON, 
+<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36afbaedde498cdead4f2780217646e9ba1">Button::UP</a> = UP_BUTTON, 
+<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36ac4e0e4e3118472beeb2ae75827450f1f">Button::DOWN</a> = DOWN_BUTTON, 
+<br />
+&#160;&#160;<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36a331b3100a485d8cacff1d3df8e9b0c13">Button::ENTER</a> = ENTER_BUTTON, 
+<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36a1dd26f1f1790f0b56d5752fb0fbecef0">Button::BACK</a> = BACK_BUTTON
+<br />
+ }</td></tr>
+<tr class="separator:afbdfa0648245919af43c1937959d4d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ca16e9638baa34719d7002f90f570b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570b">Color</a> { <a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570ba88559a0cfd8250c9d65970cc145c92d4">Color::OFF</a> = LED_OFF, 
+<a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570baa2d9547b5d3dd9f05984475f7c926da0">Color::RED</a> = LED_RED, 
+<a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570ba9de0e5dd94e861317e74964bed179fa0">Color::GREEN</a> = LED_GREEN, 
+<a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570ba5b6490317b6f7270bc3ab5ffd07c1f52">Color::ORANGE</a> = LED_ORANGE
+ }</td></tr>
+<tr class="separator:a32ca16e9638baa34719d7002f90f570b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa1aa8f4e9a396f034acc3904de5ddd05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#aa1aa8f4e9a396f034acc3904de5ddd05">Body</a> ()</td></tr>
+<tr class="separator:aa1aa8f4e9a396f034acc3904de5ddd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fd640ad20fa95c6d02e0165f1c104d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a49fd640ad20fa95c6d02e0165f1c104d">Body</a> (const <a class="el" href="classetrobo_1_1_body.html">Body</a> &amp;body)=delete</td></tr>
+<tr class="separator:a49fd640ad20fa95c6d02e0165f1c104d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff34f9bc05ea04826b3f82e2a91359d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classetrobo_1_1_body.html">Body</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#aff34f9bc05ea04826b3f82e2a91359d6">operator=</a> (const <a class="el" href="classetrobo_1_1_body.html">Body</a> &amp;body)=delete</td></tr>
+<tr class="separator:aff34f9bc05ea04826b3f82e2a91359d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c60cfd1f7affdac508c36077dfde932"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a9c60cfd1f7affdac508c36077dfde932">~Body</a> ()=default</td></tr>
+<tr class="separator:a9c60cfd1f7affdac508c36077dfde932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1d553229e379dfd8dac0486e499651"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a3a1d553229e379dfd8dac0486e499651">clearCache</a> ()</td></tr>
+<tr class="separator:a3a1d553229e379dfd8dac0486e499651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0cc04b3e0474a5cd34e2cf26df6d235"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#ad0cc04b3e0474a5cd34e2cf26df6d235">getTime</a> ()</td></tr>
+<tr class="separator:ad0cc04b3e0474a5cd34e2cf26df6d235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78af3bdc0a00e33b97cf327315571d4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#aa78af3bdc0a00e33b97cf327315571d4">getProcessTime</a> ()</td></tr>
+<tr class="separator:aa78af3bdc0a00e33b97cf327315571d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab828775ffa84e5df55ee07115a71c51f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#ab828775ffa84e5df55ee07115a71c51f">getBatteryVoltage</a> ()</td></tr>
+<tr class="separator:ab828775ffa84e5df55ee07115a71c51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b8da75398da553e02626bc2f02f88f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a01b8da75398da553e02626bc2f02f88f">getBatteryCurrent</a> ()</td></tr>
+<tr class="separator:a01b8da75398da553e02626bc2f02f88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa741f0d41d5c5005b6e10e23c42e9158"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#aa741f0d41d5c5005b6e10e23c42e9158">isButtonPressed</a> (<a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36">Button</a> button)</td></tr>
+<tr class="separator:aa741f0d41d5c5005b6e10e23c42e9158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209634d54ea8c2e0c8abae4acc0fd144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a209634d54ea8c2e0c8abae4acc0fd144">setLedColor</a> (<a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570b">Color</a> color)</td></tr>
+<tr class="separator:a209634d54ea8c2e0c8abae4acc0fd144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a801f6d6e4c7098c415f0e86b3e77ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#a9a801f6d6e4c7098c415f0e86b3e77ae">playSpeakerTone</a> (uint16_t frequency, int32_t duration, uint8_t volume)</td></tr>
+<tr class="separator:a9a801f6d6e4c7098c415f0e86b3e77ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae952f3f9e7e247b0cfbd824e51eb5ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#ae952f3f9e7e247b0cfbd824e51eb5ae5">drawLcdString</a> (const char *str, int32_t x, int32_t y)</td></tr>
+<tr class="separator:ae952f3f9e7e247b0cfbd824e51eb5ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6fe04b8d6f00bec78ff48e1b171439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_body.html#abf6fe04b8d6f00bec78ff48e1b171439">drawLcdInt</a> (int64_t val, uint8_t num, int32_t x, int32_t y)</td></tr>
+<tr class="separator:abf6fe04b8d6f00bec78ff48e1b171439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>EV3の本体を制御するためのクラス。 </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a class="anchor" id="afbdfa0648245919af43c1937959d4d36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36">etrobo::Body::Button</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>本体のボタンの設定値。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a class="anchor" id="afbdfa0648245919af43c1937959d4d36a684d325a7303f52e64011467ff5c5758"></a>LEFT&#160;</td><td class="fielddoc">
+<p>左ボタン。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afbdfa0648245919af43c1937959d4d36a21507b40c80068eda19865706fdc2403"></a>RIGHT&#160;</td><td class="fielddoc">
+<p>右ボタン。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afbdfa0648245919af43c1937959d4d36afbaedde498cdead4f2780217646e9ba1"></a>UP&#160;</td><td class="fielddoc">
+<p>上ボタン。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afbdfa0648245919af43c1937959d4d36ac4e0e4e3118472beeb2ae75827450f1f"></a>DOWN&#160;</td><td class="fielddoc">
+<p>下ボタン。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afbdfa0648245919af43c1937959d4d36a331b3100a485d8cacff1d3df8e9b0c13"></a>ENTER&#160;</td><td class="fielddoc">
+<p>中央ボタン。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afbdfa0648245919af43c1937959d4d36a1dd26f1f1790f0b56d5752fb0fbecef0"></a>BACK&#160;</td><td class="fielddoc">
+<p>戻るボタン。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a32ca16e9638baa34719d7002f90f570b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570b">etrobo::Body::Color</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>LEDの色の設定値。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a class="anchor" id="a32ca16e9638baa34719d7002f90f570ba88559a0cfd8250c9d65970cc145c92d4"></a>OFF&#160;</td><td class="fielddoc">
+<p>消灯。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a32ca16e9638baa34719d7002f90f570baa2d9547b5d3dd9f05984475f7c926da0"></a>RED&#160;</td><td class="fielddoc">
+<p>赤色。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a32ca16e9638baa34719d7002f90f570ba9de0e5dd94e861317e74964bed179fa0"></a>GREEN&#160;</td><td class="fielddoc">
+<p>緑色。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a32ca16e9638baa34719d7002f90f570ba5b6490317b6f7270bc3ab5ffd07c1f52"></a>ORANGE&#160;</td><td class="fielddoc">
+<p>オレンジ色。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="aa1aa8f4e9a396f034acc3904de5ddd05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">etrobo::Body::Body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>初期化処理を実行する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a49fd640ad20fa95c6d02e0165f1c104d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">etrobo::Body::Body </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classetrobo_1_1_body.html">Body</a> &amp;&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトの複製を禁止。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9c60cfd1f7affdac508c36077dfde932"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual etrobo::Body::~Body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>終了処理を実行する。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a3a1d553229e379dfd8dac0486e499651"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Body::clearCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キャッシュとして保存されているデータを消去する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="abf6fe04b8d6f00bec78ff48e1b171439"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Body::drawLcdInt </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>LCDに整数を出力する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>出力する整数 </td></tr>
+    <tr><td class="paramname">num</td><td>出力する桁数 </td></tr>
+    <tr><td class="paramname">x</td><td>出力座標(X座標) </td></tr>
+    <tr><td class="paramname">y</td><td>出力座標(Y座標) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae952f3f9e7e247b0cfbd824e51eb5ae5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Body::drawLcdString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>LCDに文字を出力する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>出力文字列 </td></tr>
+    <tr><td class="paramname">x</td><td>出力座標(X座標) </td></tr>
+    <tr><td class="paramname">y</td><td>出力座標(Y座標) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a01b8da75398da553e02626bc2f02f88f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t etrobo::Body::getBatteryCurrent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>バッテリの電流を返す。 </p><dl class="section return"><dt>戻り値</dt><dd>電流値(単位:mA) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab828775ffa84e5df55ee07115a71c51f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t etrobo::Body::getBatteryVoltage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>バッテリの電圧を返す。 </p><dl class="section return"><dt>戻り値</dt><dd>電圧値(単位:mV) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa78af3bdc0a00e33b97cf327315571d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t etrobo::Body::getProcessTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>性能評価用のシステム時間を返す。 </p><dl class="section return"><dt>戻り値</dt><dd>システム時間 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad0cc04b3e0474a5cd34e2cf26df6d235"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t etrobo::Body::getTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>現在のシステム時間を返す。 </p><dl class="section return"><dt>戻り値</dt><dd>システム時間 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa741f0d41d5c5005b6e10e23c42e9158"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool etrobo::Body::isButtonPressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classetrobo_1_1_body.html#afbdfa0648245919af43c1937959d4d36">Button</a>&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>本体の指定されたボタンが押されていればtrueを返す。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>確認するボタン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>押されていればtrue </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aff34f9bc05ea04826b3f82e2a91359d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classetrobo_1_1_body.html">Body</a>&amp; etrobo::Body::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classetrobo_1_1_body.html">Body</a> &amp;&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトの複製を禁止。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9a801f6d6e4c7098c415f0e86b3e77ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Body::playSpeakerTone </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>volume</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>音を鳴らす。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>周波数 </td></tr>
+    <tr><td class="paramname">duration</td><td>鳴らす時間(単位:ms) </td></tr>
+    <tr><td class="paramname">volume</td><td>音の大きさ(0-100) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a209634d54ea8c2e0c8abae4acc0fd144"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Body::setLedColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classetrobo_1_1_body.html#a32ca16e9638baa34719d7002f90f570b">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>本体のLEDライトの色を設定する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>LEDライトの色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Unix/home/project/workspace/EV3onRules/src/device/<a class="el" href="_body_8h_source.html">Body.h</a></li>
+<li>C:/Unix/home/project/workspace/EV3onRules/src/device/Body.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EV3 on Rules: C:/Unix/home/project/workspace/EV3onRules/src/Controller.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EV3 on Rules
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">Rule-base framework for EV3RT</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Controller.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Controller.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Implementation of the Class Controller</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  Created on:      2016/06/15 8:25:03</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Original author: Atsushi TAKEDA</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#if !defined(EA_FE6DA9D3_5A58_44ea_B1A2_FEA0E02FC754__INCLUDED_)</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define EA_FE6DA9D3_5A58_44ea_B1A2_FEA0E02FC754__INCLUDED_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;RuleManager.h&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;DeviceManager.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Rule.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;FilterManager.h&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceetrobo.html">etrobo</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classetrobo_1_1_controller.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classetrobo_1_1_controller.html">Controller</a></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  std::unique_ptr&lt;RuleManager&gt; _ruleManager;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  std::unique_ptr&lt;DeviceManager&gt; _deviceManager;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  std::unique_ptr&lt;FilterManager&gt; _filterManager;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classetrobo_1_1_rule.html">Rule</a>* _rule;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> _initialize;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classetrobo_1_1_controller.html#a6e8ebd97671363fa674e86f2accac938">Controller</a>();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classetrobo_1_1_controller.html#a6e8ebd97671363fa674e86f2accac938">Controller</a>(<span class="keyword">const</span> <a class="code" href="classetrobo_1_1_controller.html">Controller</a>&amp; controller) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classetrobo_1_1_controller.html">Controller</a>&amp; <a class="code" href="classetrobo_1_1_controller.html#abc374e8165df9d7cd58c5a5a4920eb44">operator=</a>(<span class="keyword">const</span> <a class="code" href="classetrobo_1_1_controller.html">Controller</a>&amp;) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classetrobo_1_1_controller.html#ab98b8e1dae2b31fcc24d2164e265a369">~Controller</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classetrobo_1_1_controller.html#a0f56ec9c5b43be1dddec53d2dffad402">run</a>();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_controller.html#ad9fda85cd39e511f8e594d904073faf6">communicate</a>();</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_controller.html#ae6879408a59d7debf7ac4b23c240222b">close</a>();</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace etrobo</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif // !defined(EA_FE6DA9D3_5A58_44ea_B1A2_FEA0E02FC754__INCLUDED_)</span></div><div class="ttc" id="classetrobo_1_1_rule_html"><div class="ttname"><a href="classetrobo_1_1_rule.html">etrobo::Rule</a></div><div class="ttdef"><b>Definition:</b> Rule.h:22</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html_abc374e8165df9d7cd58c5a5a4920eb44"><div class="ttname"><a href="classetrobo_1_1_controller.html#abc374e8165df9d7cd58c5a5a4920eb44">etrobo::Controller::operator=</a></div><div class="ttdeci">Controller &amp; operator=(const Controller &amp;)=delete</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html_ae6879408a59d7debf7ac4b23c240222b"><div class="ttname"><a href="classetrobo_1_1_controller.html#ae6879408a59d7debf7ac4b23c240222b">etrobo::Controller::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> Controller.cpp:83</div></div>
+<div class="ttc" id="namespaceetrobo_html"><div class="ttname"><a href="namespaceetrobo.html">etrobo</a></div><div class="ttdef"><b>Definition:</b> Controller.cpp:12</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html_a6e8ebd97671363fa674e86f2accac938"><div class="ttname"><a href="classetrobo_1_1_controller.html#a6e8ebd97671363fa674e86f2accac938">etrobo::Controller::Controller</a></div><div class="ttdeci">Controller()</div><div class="ttdef"><b>Definition:</b> Controller.cpp:18</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html_ad9fda85cd39e511f8e594d904073faf6"><div class="ttname"><a href="classetrobo_1_1_controller.html#ad9fda85cd39e511f8e594d904073faf6">etrobo::Controller::communicate</a></div><div class="ttdeci">void communicate()</div><div class="ttdef"><b>Definition:</b> Controller.cpp:73</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html_ab98b8e1dae2b31fcc24d2164e265a369"><div class="ttname"><a href="classetrobo_1_1_controller.html#ab98b8e1dae2b31fcc24d2164e265a369">etrobo::Controller::~Controller</a></div><div class="ttdeci">virtual ~Controller()=default</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html_a0f56ec9c5b43be1dddec53d2dffad402"><div class="ttname"><a href="classetrobo_1_1_controller.html#a0f56ec9c5b43be1dddec53d2dffad402">etrobo::Controller::run</a></div><div class="ttdeci">bool run()</div><div class="ttdef"><b>Definition:</b> Controller.cpp:32</div></div>
+<div class="ttc" id="classetrobo_1_1_controller_html"><div class="ttname"><a href="classetrobo_1_1_controller.html">etrobo::Controller</a></div><div class="ttdef"><b>Definition:</b> Controller.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

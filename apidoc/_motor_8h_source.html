@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EV3 on Rules: C:/Unix/home/project/workspace/EV3onRules/src/device/Motor.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EV3 on Rules
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">Rule-base framework for EV3RT</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_16dc92632bab467dc50b01bd02b3341a.html">device</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Motor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Motor.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Implementation of the Class Motor</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  Created on:      2016/06/15 11:34:37</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Original author: Atsushi TAKEDA</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#if !defined(EA_E3CFEAAD_C0A0_4255_931C_872DE9E30DCB__INCLUDED_)</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define EA_E3CFEAAD_C0A0_4255_931C_872DE9E30DCB__INCLUDED_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;ev3api.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceetrobo.html">etrobo</a></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classetrobo_1_1_motor.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classetrobo_1_1_motor.html">Motor</a></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">   26</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">Type</a></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a684d325a7303f52e64011467ff5c5758">LEFT</a>,</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a21507b40c80068eda19865706fdc2403">RIGHT</a>,</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a1dd26f1f1790f0b56d5752fb0fbecef0">BACK</a>,</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  };</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  motor_port_t _port;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classetrobo_1_1_motor.html#a47d018192a358e400238fde8f03b4001">Motor</a>(<a class="code" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">Type</a> type);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classetrobo_1_1_motor.html#a47d018192a358e400238fde8f03b4001">Motor</a>(<span class="keyword">const</span> <a class="code" href="classetrobo_1_1_motor.html">Motor</a>&amp; motor) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classetrobo_1_1_motor.html">Motor</a>&amp; <a class="code" href="classetrobo_1_1_motor.html#aeb4de97057ac30e3b75fb219885324dc">operator=</a>(<span class="keyword">const</span> <a class="code" href="classetrobo_1_1_motor.html">Motor</a>&amp;) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classetrobo_1_1_motor.html#a6d2debc41f81c6060ff3e8196da2aff6">~Motor</a>();</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_motor.html#a7e924081961c86bd558a621b62e61fd6">clearCache</a>();</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_motor.html#aa0fbf4148ae31630ac61392750d85463">resetCount</a>();</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  int32_t <a class="code" href="classetrobo_1_1_motor.html#a805868d1fdb10f79e7c0854aeb1ceb74">getCount</a>();</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  int32_t <a class="code" href="classetrobo_1_1_motor.html#a4cbf4e0f69995909d0455678669d5f87">getPower</a>();</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_motor.html#a4b16f042064335af567586332f92ccdf">setPower</a>(int32_t power, <span class="keywordtype">bool</span> brake = <span class="keyword">false</span>);</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_motor.html#abb2a209c73237fd9a860ab7a30bb5406">setRotate</a>(int32_t degree, uint32_t power, <span class="keywordtype">bool</span> blocking = <span class="keyword">false</span>);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">bool</span> _cacheCount;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">bool</span> _cachePower;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  int32_t _count;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  int32_t _power;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;};</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;} <span class="comment">// namespace etrobo</span></div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif // !defined(EA_E3CFEAAD_C0A0_4255_931C_872DE9E30DCB__INCLUDED_)</span></div><div class="ttc" id="classetrobo_1_1_motor_html_a805868d1fdb10f79e7c0854aeb1ceb74"><div class="ttname"><a href="classetrobo_1_1_motor.html#a805868d1fdb10f79e7c0854aeb1ceb74">etrobo::Motor::getCount</a></div><div class="ttdeci">int32_t getCount()</div><div class="ttdef"><b>Definition:</b> Motor.cpp:71</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a7e924081961c86bd558a621b62e61fd6"><div class="ttname"><a href="classetrobo_1_1_motor.html#a7e924081961c86bd558a621b62e61fd6">etrobo::Motor::clearCache</a></div><div class="ttdeci">void clearCache()</div><div class="ttdef"><b>Definition:</b> Motor.cpp:51</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_aa0fbf4148ae31630ac61392750d85463"><div class="ttname"><a href="classetrobo_1_1_motor.html#aa0fbf4148ae31630ac61392750d85463">etrobo::Motor::resetCount</a></div><div class="ttdeci">void resetCount()</div><div class="ttdef"><b>Definition:</b> Motor.cpp:60</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a4b16f042064335af567586332f92ccdf"><div class="ttname"><a href="classetrobo_1_1_motor.html#a4b16f042064335af567586332f92ccdf">etrobo::Motor::setPower</a></div><div class="ttdeci">void setPower(int32_t power, bool brake=false)</div><div class="ttdef"><b>Definition:</b> Motor.cpp:104</div></div>
+<div class="ttc" id="namespaceetrobo_html"><div class="ttname"><a href="namespaceetrobo.html">etrobo</a></div><div class="ttdef"><b>Definition:</b> Controller.cpp:12</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a7295e3ba12a3f5d7222b081cb8865426a1dd26f1f1790f0b56d5752fb0fbecef0"><div class="ttname"><a href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a1dd26f1f1790f0b56d5752fb0fbecef0">etrobo::Motor::Type::BACK</a></div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html"><div class="ttname"><a href="classetrobo_1_1_motor.html">etrobo::Motor</a></div><div class="ttdef"><b>Definition:</b> Motor.h:20</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a4cbf4e0f69995909d0455678669d5f87"><div class="ttname"><a href="classetrobo_1_1_motor.html#a4cbf4e0f69995909d0455678669d5f87">etrobo::Motor::getPower</a></div><div class="ttdeci">int32_t getPower()</div><div class="ttdef"><b>Definition:</b> Motor.cpp:86</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a6d2debc41f81c6060ff3e8196da2aff6"><div class="ttname"><a href="classetrobo_1_1_motor.html#a6d2debc41f81c6060ff3e8196da2aff6">etrobo::Motor::~Motor</a></div><div class="ttdeci">virtual ~Motor()</div><div class="ttdef"><b>Definition:</b> Motor.cpp:42</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a47d018192a358e400238fde8f03b4001"><div class="ttname"><a href="classetrobo_1_1_motor.html#a47d018192a358e400238fde8f03b4001">etrobo::Motor::Motor</a></div><div class="ttdeci">Motor(Type type)</div><div class="ttdef"><b>Definition:</b> Motor.cpp:19</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a7295e3ba12a3f5d7222b081cb8865426a684d325a7303f52e64011467ff5c5758"><div class="ttname"><a href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a684d325a7303f52e64011467ff5c5758">etrobo::Motor::Type::LEFT</a></div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_abb2a209c73237fd9a860ab7a30bb5406"><div class="ttname"><a href="classetrobo_1_1_motor.html#abb2a209c73237fd9a860ab7a30bb5406">etrobo::Motor::setRotate</a></div><div class="ttdeci">void setRotate(int32_t degree, uint32_t power, bool blocking=false)</div><div class="ttdef"><b>Definition:</b> Motor.cpp:124</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_aeb4de97057ac30e3b75fb219885324dc"><div class="ttname"><a href="classetrobo_1_1_motor.html#aeb4de97057ac30e3b75fb219885324dc">etrobo::Motor::operator=</a></div><div class="ttdeci">Motor &amp; operator=(const Motor &amp;)=delete</div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a7295e3ba12a3f5d7222b081cb8865426a21507b40c80068eda19865706fdc2403"><div class="ttname"><a href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a21507b40c80068eda19865706fdc2403">etrobo::Motor::Type::RIGHT</a></div></div>
+<div class="ttc" id="classetrobo_1_1_motor_html_a7295e3ba12a3f5d7222b081cb8865426"><div class="ttname"><a href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">etrobo::Motor::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> Motor.h:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

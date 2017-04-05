@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EV3 on Rules: etrobo::Motor クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EV3 on Rules
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">Rule-base framework for EV3RT</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>etrobo</b></li><li class="navelem"><a class="el" href="classetrobo_1_1_motor.html">Motor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classetrobo_1_1_motor-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">etrobo::Motor クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_motor_8h_source.html">Motor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a7295e3ba12a3f5d7222b081cb8865426"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">Type</a> { <a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a684d325a7303f52e64011467ff5c5758">Type::LEFT</a>, 
+<a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a21507b40c80068eda19865706fdc2403">Type::RIGHT</a>, 
+<a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426a1dd26f1f1790f0b56d5752fb0fbecef0">Type::BACK</a>
+ }</td></tr>
+<tr class="separator:a7295e3ba12a3f5d7222b081cb8865426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a47d018192a358e400238fde8f03b4001"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a47d018192a358e400238fde8f03b4001">Motor</a> (<a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">Type</a> type)</td></tr>
+<tr class="separator:a47d018192a358e400238fde8f03b4001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cca513d1b103a0f8c49c7c3c73cd23d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a7cca513d1b103a0f8c49c7c3c73cd23d">Motor</a> (const <a class="el" href="classetrobo_1_1_motor.html">Motor</a> &amp;motor)=delete</td></tr>
+<tr class="separator:a7cca513d1b103a0f8c49c7c3c73cd23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4de97057ac30e3b75fb219885324dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classetrobo_1_1_motor.html">Motor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#aeb4de97057ac30e3b75fb219885324dc">operator=</a> (const <a class="el" href="classetrobo_1_1_motor.html">Motor</a> &amp;)=delete</td></tr>
+<tr class="separator:aeb4de97057ac30e3b75fb219885324dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2debc41f81c6060ff3e8196da2aff6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a6d2debc41f81c6060ff3e8196da2aff6">~Motor</a> ()</td></tr>
+<tr class="separator:a6d2debc41f81c6060ff3e8196da2aff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e924081961c86bd558a621b62e61fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a7e924081961c86bd558a621b62e61fd6">clearCache</a> ()</td></tr>
+<tr class="separator:a7e924081961c86bd558a621b62e61fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0fbf4148ae31630ac61392750d85463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#aa0fbf4148ae31630ac61392750d85463">resetCount</a> ()</td></tr>
+<tr class="separator:aa0fbf4148ae31630ac61392750d85463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805868d1fdb10f79e7c0854aeb1ceb74"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a805868d1fdb10f79e7c0854aeb1ceb74">getCount</a> ()</td></tr>
+<tr class="separator:a805868d1fdb10f79e7c0854aeb1ceb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbf4e0f69995909d0455678669d5f87"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a4cbf4e0f69995909d0455678669d5f87">getPower</a> ()</td></tr>
+<tr class="separator:a4cbf4e0f69995909d0455678669d5f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b16f042064335af567586332f92ccdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#a4b16f042064335af567586332f92ccdf">setPower</a> (int32_t power, bool brake=false)</td></tr>
+<tr class="separator:a4b16f042064335af567586332f92ccdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2a209c73237fd9a860ab7a30bb5406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetrobo_1_1_motor.html#abb2a209c73237fd9a860ab7a30bb5406">setRotate</a> (int32_t degree, uint32_t power, bool blocking=false)</td></tr>
+<tr class="separator:abb2a209c73237fd9a860ab7a30bb5406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>モーターの動作を制御するクラス。 </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a class="anchor" id="a7295e3ba12a3f5d7222b081cb8865426"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">etrobo::Motor::Type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>モーターの設置位置。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a class="anchor" id="a7295e3ba12a3f5d7222b081cb8865426a684d325a7303f52e64011467ff5c5758"></a>LEFT&#160;</td><td class="fielddoc">
+<p>左モーター。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7295e3ba12a3f5d7222b081cb8865426a21507b40c80068eda19865706fdc2403"></a>RIGHT&#160;</td><td class="fielddoc">
+<p>右モーター。 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7295e3ba12a3f5d7222b081cb8865426a1dd26f1f1790f0b56d5752fb0fbecef0"></a>BACK&#160;</td><td class="fielddoc">
+<p>後ろモーター。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a47d018192a358e400238fde8f03b4001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">etrobo::Motor::Motor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classetrobo_1_1_motor.html#a7295e3ba12a3f5d7222b081cb8865426">Type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>初期化処理を実行する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>接続位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7cca513d1b103a0f8c49c7c3c73cd23d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">etrobo::Motor::Motor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classetrobo_1_1_motor.html">Motor</a> &amp;&#160;</td>
+          <td class="paramname"><em>motor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトの複製を禁止。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a6d2debc41f81c6060ff3e8196da2aff6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">etrobo::Motor::~Motor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>終了処理を実行する。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a7e924081961c86bd558a621b62e61fd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Motor::clearCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キャッシュとして保存されているデータを消去する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a805868d1fdb10f79e7c0854aeb1ceb74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t etrobo::Motor::getCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>モーターの回転角度の計測値を返す。 反対方向に回転している場合は負の値を返す。 </p><dl class="section return"><dt>戻り値</dt><dd>回転角度(単位はdegree) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4cbf4e0f69995909d0455678669d5f87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t etrobo::Motor::getPower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>モーターの回転力を返す。 逆回転している場合は負の数を返す。 </p><dl class="section return"><dt>戻り値</dt><dd>回転力 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb4de97057ac30e3b75fb219885324dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classetrobo_1_1_motor.html">Motor</a>&amp; etrobo::Motor::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classetrobo_1_1_motor.html">Motor</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトの複製を禁止。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa0fbf4148ae31630ac61392750d85463"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Motor::resetCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>モーターの回転角度の計測値を0に設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4b16f042064335af567586332f92ccdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Motor::setPower </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>power</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>brake</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>モーターの回転力を設定する。 powerに負の値を設定すると逆方向に回転する。 brakeにtrueを設定すると回転を停止させようとする。 powerに0以外の値を設定した場合、brakeにtrueを設定しても無視する。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">power</td><td>回転力(-100以上, 100以下) </td></tr>
+    <tr><td class="paramname">brake</td><td>回転を停止させるならtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abb2a209c73237fd9a860ab7a30bb5406"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etrobo::Motor::setRotate </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>degree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>power</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>blocking</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定された角度だけモーターを回転させる。 degreeで指定された角度までpowerの回転力で回転させる。 反対方向に回転させる場合はdegreeに負の角度を設定する。 blockingにtrueを設定した場合、このメソッドの処理は回転が終了するまで終了しない。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degree</td><td>回転角度(単位はdegree) </td></tr>
+    <tr><td class="paramname">power</td><td>回転力(0以上,100以下) </td></tr>
+    <tr><td class="paramname">blocking</td><td>回転終了まで待機するならtrue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Unix/home/project/workspace/EV3onRules/src/device/<a class="el" href="_motor_8h_source.html">Motor.h</a></li>
+<li>C:/Unix/home/project/workspace/EV3onRules/src/device/Motor.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

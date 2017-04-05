@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EV3 on Rules: C:/Unix/home/project/workspace/EV3onRules/src/Rule.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EV3 on Rules
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">Rule-base framework for EV3RT</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Rule.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Rule.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Implementation of the Class Rule</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  Created on:      2016/06/15 8:27:17</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Original author: Atsushi TAKEDA</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#if !defined(EA_CDF790FE_C9EC_4d14_887A_52D524418695__INCLUDED_)</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define EA_CDF790FE_C9EC_4d14_887A_52D524418695__INCLUDED_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;DeviceManager.h&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;FilterManager.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceetrobo.html">etrobo</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classetrobo_1_1_rule.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classetrobo_1_1_rule.html">Rule</a></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  uint32_t _number;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classetrobo_1_1_rule.html#ae69ce131aa60f90234ca4506393e3dc4">Rule</a>(uint32_t number);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classetrobo_1_1_rule.html#a11063d5f94b964c5bd85fff89ebcf3b0">~Rule</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  uint32_t <a class="code" href="classetrobo_1_1_rule.html#a7eb252300522e6066b27219e96e96cbd">getNumber</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_rule.html#afee097cfeb8e07170812d57b8378a9fb">init</a>(<a class="code" href="classetrobo_1_1_filter_manager.html">FilterManager</a>* filterManager, <a class="code" href="classetrobo_1_1_device_manager.html">DeviceManager</a>* deviceManager) = 0;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classetrobo_1_1_rule.html#a0ecac39d990b5d66fbcd6037f93029ce">run</a>(<a class="code" href="classetrobo_1_1_filter_manager.html">FilterManager</a>* filterManager, <a class="code" href="classetrobo_1_1_device_manager.html">DeviceManager</a>* deviceManager) = 0;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">virtual</span> int32_t <a class="code" href="classetrobo_1_1_rule.html#a2e5725a01432249269252257c45797ac">next</a>(<a class="code" href="classetrobo_1_1_filter_manager.html">FilterManager</a>* filterManager, <a class="code" href="classetrobo_1_1_device_manager.html">DeviceManager</a>* deviceManager) = 0;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <span class="comment">// namespace etrobo</span></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif // !defined(EA_CDF790FE_C9EC_4d14_887A_52D524418695__INCLUDED_)</span></div><div class="ttc" id="classetrobo_1_1_rule_html"><div class="ttname"><a href="classetrobo_1_1_rule.html">etrobo::Rule</a></div><div class="ttdef"><b>Definition:</b> Rule.h:22</div></div>
+<div class="ttc" id="classetrobo_1_1_rule_html_a0ecac39d990b5d66fbcd6037f93029ce"><div class="ttname"><a href="classetrobo_1_1_rule.html#a0ecac39d990b5d66fbcd6037f93029ce">etrobo::Rule::run</a></div><div class="ttdeci">virtual void run(FilterManager *filterManager, DeviceManager *deviceManager)=0</div></div>
+<div class="ttc" id="namespaceetrobo_html"><div class="ttname"><a href="namespaceetrobo.html">etrobo</a></div><div class="ttdef"><b>Definition:</b> Controller.cpp:12</div></div>
+<div class="ttc" id="classetrobo_1_1_rule_html_a7eb252300522e6066b27219e96e96cbd"><div class="ttname"><a href="classetrobo_1_1_rule.html#a7eb252300522e6066b27219e96e96cbd">etrobo::Rule::getNumber</a></div><div class="ttdeci">uint32_t getNumber()</div><div class="ttdef"><b>Definition:</b> Rule.cpp:26</div></div>
+<div class="ttc" id="classetrobo_1_1_filter_manager_html"><div class="ttname"><a href="classetrobo_1_1_filter_manager.html">etrobo::FilterManager</a></div><div class="ttdef"><b>Definition:</b> FilterManager.h:24</div></div>
+<div class="ttc" id="classetrobo_1_1_rule_html_a11063d5f94b964c5bd85fff89ebcf3b0"><div class="ttname"><a href="classetrobo_1_1_rule.html#a11063d5f94b964c5bd85fff89ebcf3b0">etrobo::Rule::~Rule</a></div><div class="ttdeci">virtual ~Rule()=default</div></div>
+<div class="ttc" id="classetrobo_1_1_device_manager_html"><div class="ttname"><a href="classetrobo_1_1_device_manager.html">etrobo::DeviceManager</a></div><div class="ttdef"><b>Definition:</b> DeviceManager.h:23</div></div>
+<div class="ttc" id="classetrobo_1_1_rule_html_a2e5725a01432249269252257c45797ac"><div class="ttname"><a href="classetrobo_1_1_rule.html#a2e5725a01432249269252257c45797ac">etrobo::Rule::next</a></div><div class="ttdeci">virtual int32_t next(FilterManager *filterManager, DeviceManager *deviceManager)=0</div></div>
+<div class="ttc" id="classetrobo_1_1_rule_html_ae69ce131aa60f90234ca4506393e3dc4"><div class="ttname"><a href="classetrobo_1_1_rule.html#ae69ce131aa60f90234ca4506393e3dc4">etrobo::Rule::Rule</a></div><div class="ttdeci">Rule(uint32_t number)</div><div class="ttdef"><b>Definition:</b> Rule.cpp:17</div></div>
+<div class="ttc" id="classetrobo_1_1_rule_html_afee097cfeb8e07170812d57b8378a9fb"><div class="ttname"><a href="classetrobo_1_1_rule.html#afee097cfeb8e07170812d57b8378a9fb">etrobo::Rule::init</a></div><div class="ttdeci">virtual void init(FilterManager *filterManager, DeviceManager *deviceManager)=0</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
