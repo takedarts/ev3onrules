@@ -19,7 +19,7 @@ namespace etrobo
  * @param size バッファの大きさ
  */
 ByteBuffer::ByteBuffer(uint32_t size) :
-    _buffer(new uint8_t[size]),
+    _buffer(new char[size]),
     _size(size),
     _offset(0),
     _length(0)
@@ -32,7 +32,7 @@ ByteBuffer::ByteBuffer(uint32_t size) :
  * @param length バッファの長さ
  * @return 読み込んだデータの長さ
  */
-int32_t ByteBuffer::read(uint8_t* data, uint32_t length)
+int32_t ByteBuffer::read(char* data, uint32_t length)
 {
   // データの長さを確認
   length = std::min(length, _length);
@@ -49,7 +49,7 @@ int32_t ByteBuffer::read(uint8_t* data, uint32_t length)
     uint32_t len = std::min(length, _size - _offset);
 
     // 読み込み
-    memcpy(data, _buffer.get() + _offset, sizeof(uint8_t) * len);
+    memcpy(data, _buffer.get() + _offset, sizeof(char) * len);
 
     // 読み込み位置を更新
     _offset += len;
@@ -75,7 +75,7 @@ int32_t ByteBuffer::read(uint8_t* data, uint32_t length)
  * @param length 書き込むデータの長さ
  * @return 書き込まれたデータの長さ
  */
-int32_t ByteBuffer::write(const uint8_t* data, uint32_t length)
+int32_t ByteBuffer::write(const char* data, uint32_t length)
 {
   // データの長さを確認
   length = std::min(length, _size - _length);
@@ -99,7 +99,7 @@ int32_t ByteBuffer::write(const uint8_t* data, uint32_t length)
     uint32_t len = std::min(length, _size - off);
 
     // 書き込み
-    memcpy(_buffer.get() + off, data, sizeof(uint8_t) * len);
+    memcpy(_buffer.get() + off, data, sizeof(char) * len);
 
     // データの長さを更新
     _length += len;

@@ -23,7 +23,7 @@ private:
   /**
    * データを格納するバッファ。
    */
-  std::unique_ptr<uint8_t[]> _buffer;
+  std::unique_ptr<char[]> _buffer;
 
   /**
    * バッファの大きさ。
@@ -68,7 +68,7 @@ public:
    * @param length バッファの長さ
    * @return 読み込んだデータの長さ
    */
-  int32_t read(uint8_t* data, uint32_t length);
+  int32_t read(char* data, uint32_t length);
 
   /**
    * データを書き込む。
@@ -76,7 +76,7 @@ public:
    * @param length 書き込むデータの長さ
    * @return 書き込まれたデータの長さ
    */
-  int32_t write(const uint8_t* data, uint32_t length);
+  int32_t write(const char* data, uint32_t length);
 
 };
 

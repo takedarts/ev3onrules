@@ -45,7 +45,7 @@ bool bluetooth_is_connected()
  * @param length バッファの長さ
  * @return バッファに設定されたデータの長さ
  */
-uint32_t bluetooth_receive(uint8_t* data, uint32_t length)
+uint32_t bluetooth_receive(char* data, uint32_t length)
 {
   return 0;
 }
@@ -56,7 +56,7 @@ uint32_t bluetooth_receive(uint8_t* data, uint32_t length)
  * @param length 送信データの長さ
  * @return 送信されたデータの長さ
  */
-uint32_t bluetooth_send(const uint8_t* data, uint32_t length)
+uint32_t bluetooth_send(const char* data, uint32_t length)
 {
   return 0;
 }

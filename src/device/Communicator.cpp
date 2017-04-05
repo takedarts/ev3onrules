@@ -66,7 +66,7 @@ void Communicator::close()
  * @param length バッファの長さ
  * @return 受信したデータの長さ
  */
-int32_t Communicator::read(uint8_t* data, uint32_t length)
+int32_t Communicator::read(char* data, uint32_t length)
 {
   return _buffer->read(data, length);
 }
@@ -77,7 +77,7 @@ int32_t Communicator::read(uint8_t* data, uint32_t length)
  * @param length 送信データの長さ
  * @return 送信したデータの長さ
  */
-int32_t Communicator::write(const uint8_t* data, uint32_t length)
+int32_t Communicator::write(const char* data, uint32_t length)
 {
   if (bluetooth_is_connected()) {
     return bluetooth_send(data, length);
@@ -100,7 +100,7 @@ void Communicator::communicate()
     }
 
     // 受信
-    uint8_t datum;
+    char datum;
     uint32_t size = bluetooth_receive(&datum, 1);
 
     // 通信切断

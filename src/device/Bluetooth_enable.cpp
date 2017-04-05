@@ -51,9 +51,9 @@ bool bluetooth_is_connected()
  * @param length バッファの長さ
  * @return バッファに設定されたデータの長さ
  */
-uint32_t bluetooth_receive(uint8_t* data, uint32_t length)
+uint32_t bluetooth_receive(char* data, uint32_t length)
 {
-  ER_UINT ret = serial_rea_dat(SIO_PORT_BT, (char*) data, length);
+  ER_UINT ret = serial_rea_dat(SIO_PORT_BT, data, length);
 
   if (ret == E_RLWAI || ret == E_DLT) {
     return 0;
@@ -71,9 +71,9 @@ uint32_t bluetooth_receive(uint8_t* data, uint32_t length)
  * @param length 送信データの長さ
  * @return 送信されたデータの長さ
  */
-uint32_t bluetooth_send(const uint8_t* data, uint32_t length)
+uint32_t bluetooth_send(const char* data, uint32_t length)
 {
-  ER_UINT ret = serial_wri_dat(SIO_PORT_BT, (char*) data, length);
+  ER_UINT ret = serial_wri_dat(SIO_PORT_BT, data, length);
 
   if (ret < 0) {
     throw Exception("failed at serial_rea_dat()");

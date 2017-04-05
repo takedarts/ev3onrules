@@ -70,7 +70,7 @@ public:
    * @param length バッファの長さ
    * @return 受信したデータの長さ
    */
-  int32_t read(uint8_t* data, uint32_t length);
+  int32_t read(char* data, uint32_t length);
 
   /**
    * データを送信する。
@@ -78,7 +78,7 @@ public:
    * @param length 送信データの長さ
    * @return 送信したデータの長さ
    */
-  int32_t write(const uint8_t* data, uint32_t length);
+  int32_t write(const char* data, uint32_t length);
 
   /**
    * 通信処理を実行する。
