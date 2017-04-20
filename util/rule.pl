@@ -24,9 +24,9 @@ sub run {
 
   # read input
   $| = 1;
-  print "rule name (ex: Sample) : ";
+  print "rule name (e.g. Sample) : ";
   $rule_name = input() . $NAME;
-  print "rule number (ex: 0) : ";
+  print "rule number (e.g. 0) : ";
   $rule_number = input();
   $| = 0;
 
