@@ -66,3 +66,13 @@ cp -f build/app app
 ## ドキュメント
 - [Wiki](https://github.com/takedarts/ev3onrules/wiki)
 - [API](https://takedarts.github.io/ev3onrules/apidoc/1.0/)
+
+## ライセンス
+EV3onRulesのライセンスはGPL2.0となります。
+これは、EV3onRulesの一部のファイルはToppers/EV3RT(beta6-3)のファイルを改変したものであるためです。
+
+## 免責事項
+EV3onRulesの開発者及び配布者は、利用者がEV3onRulesを使用することによって生じるいかなる損害に対しても一切責任を負いません。
+
+## 謝辞
+EV3onRulesは東北学院大学個別研究「物理シミュレータと自律ロボットを活用したソフトウェア開発教育に関する研究」の成果の一部です。
