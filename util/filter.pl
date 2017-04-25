@@ -24,9 +24,9 @@ sub run {
 
   # read input
   $| = 1;
-  print "filter name (ex: Sample) : ";
+  print "filter name (e.g. Sample) : ";
   $filter_name = input() . $NAME;
-  print "filter number (ex: 0) : ";
+  print "filter number (e.g. 0) : ";
   $filter_number = input();
   $| = 0;
 
