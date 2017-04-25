@@ -40,6 +40,8 @@ EV3RT_DIR := /opt/hrp2
 
 次に、作成したプログラムをコンパイルし、アプリケーションを構築します。
 cygwin-terminalなどのコマンド入力画面から`make`を実行してください。
+`make`に成功すると、アプリケーションファイル「app」が生成されます。
+これはEV3RTアプリケーションとなっていますので、Toppers/EV3RTのWebサイトにある説明に従ってLEGO Mindstorms EV3にインストールしてください。
 ```
 % make
 perl /workspace/EV3onRules/util/list.pl
@@ -61,8 +63,6 @@ make[1]: Leaving directory '/workspace/EV3onRules/build'
 cp -f build/app app
 
 ```
-`make`が成功すると、アプリケーションファイル「app」が生成されます。
-これはEV3RTアプリケーションとなっていますので、Toppers/EV3RTのWebサイトにある説明に従ってLEGO Mindstorms EV3にインストールしてください。
 
 ## ドキュメント
 - [Wiki](https://github.com/takedarts/ev3onrules/wiki)
