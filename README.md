@@ -19,7 +19,6 @@ EV3onRulesはToppers/EV3RT上で動作します。
 
 次に、EV3onRulesをダウンロードします。
 対応するEV3RTのバージョンが異なりますので、注意してください。
-- [EV3onRules 1.0 for EV3RT-b63](https://takedarts.github.io/ev3onrules/download/ev3onrules-1.0-b63.zip)
 
 ## 開発環境の構築
 ダウンロードしたEV3onRulesのアーカイブを任意のディレクトリに展開します。
