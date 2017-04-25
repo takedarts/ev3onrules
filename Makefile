@@ -38,6 +38,7 @@ all: list $(SRC_DIR)/Factory.cpp $(SRC_DIR)/Include.h $(OBJ_DIR)/Makefile.app
 	@cd $(OBJ_DIR) && \
 	make -f Makefile.app module_cfg.h && \
 	make -f Makefile.app -j8
+	cp -f build/app app
 
 list:
 	@mkdir -p $(OBJ_DIR)
