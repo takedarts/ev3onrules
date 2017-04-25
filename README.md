@@ -14,7 +14,9 @@ Linuxでも、おそらく動作すると思います。
 
 ## ダウンロード
 EV3onRulesはToppers/EV3RT上で動作します。
+
 まずは、Toppers/EV3RTのWebサイトからEV3RTをダウンロードし、EV3RTで開発できる環境を整えてください。
+
 次に、EV3onRulesをダウンロードします。
 対応するEV3RTのバージョンが異なりますので、注意してください。
 - [EV3onRules 1.0 for EV3RT-b63](https://takedarts.github.io/ev3onrules/download/ev3onrules-1.0-b63.zip)
