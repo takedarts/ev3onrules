@@ -21,7 +21,9 @@ EV3onRulesはToppers/EV3RT上で動作します。
 
 ## 開発環境の構築
 ダウンロードしたEV3onRulesのアーカイブを任意のディレクトリに展開します。
+
 このアーカイブを展開したディレクトリ内でプログラムを開発することになります。
+
 展開したファイルの中に「Makefile」が含まれています。
 この「Makefile」内の変数`EV3RT_DIR`にToppers/EV3RTのソースファイル(hrp2)のパスを設定します。
 例えば、`/opt/hrp2`以下にEV3RTのソースファイルを展開している場合、Makefileの10行目は以下のようになります。
@@ -31,7 +33,9 @@ EV3RT_DIR := /opt/hrp2
 
 ## アプリケーションの開発
 プログラムを作成し、アプリケーションを構築します。
+
 プログラムの作成方法については、[Wikiのチュートリアル](https://github.com/takedarts/ev3onrules/wiki)や[APIドキュメント](https://takedarts.github.io/ev3onrules/apidoc/1.0/)を参考にしてください。
+
 次に、作成したプログラムをコンパイルし、アプリケーションを構築します。
 cygwin-terminalなどのコマンド入力画面から`make`を実行してください。
 ```
