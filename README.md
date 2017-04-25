@@ -1,4 +1,3 @@
-# EV3onRules
 ## EV3onRules とは
 EV3onRulesはToppers/EV3RT上で動作するルールベースフレームワークです。
 EV3RTを使うことで、ETロボコンの公式ロボットであるEV3wayの制御プログラムを開発することができます。
