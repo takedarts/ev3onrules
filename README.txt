@@ -30,6 +30,7 @@ EV3onRulesはToppers/EV3RT上で動作します。
   対応するEV3RTのバージョンに注意してください。
 
 Toppers/EV3RTのWebサイト: http://dev.toppers.jp/trac_user/ev3pf/wiki/WhatsEV3RT
+EV3onRulesのダウンロード: https://github.com/takedarts/ev3onrules/releases
 
 開発環境の構築
 --------------

@@ -15,7 +15,7 @@ EV3onRulesはWindowsのcygwinとMax OS Xで動作確認をしています。
 EV3onRulesはToppers/EV3RT上で動作します。
 
 - [Toppers/EV3RTのWebサイト](http://dev.toppers.jp/trac_user/ev3pf/wiki/WhatsEV3RT)からEV3RTの開発環境をダウンロードしてください。  
-- EV3onRulesをダウンロードしてください。  
+- [EV3onRulesをダウンロード](https://github.com/takedarts/ev3onrules/releases)してください。  
 対応するEV3RTのバージョンに注意してください。
 
 ## 開発環境の構築
