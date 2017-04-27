@@ -16,7 +16,7 @@ EV3onRulesはToppers/EV3RT上で動作します。
 
 - [Toppers/EV3RTのWebサイト](http://dev.toppers.jp/trac_user/ev3pf/wiki/WhatsEV3RT)からEV3RTの開発環境をダウンロードしてください。  
 - EV3onRulesをダウンロードしてください。  
-対応するEV3RTのバージョンが異なりますので、注意してください。
+対応するEV3RTのバージョンに注意してください。
 
 ## 開発環境の構築
 Toppers/EV3RTのWebサイトからダウンロードしたファイルを展開し、EV3RTでアプリケーションを開発できる環境を整えてください。
