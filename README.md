@@ -8,21 +8,22 @@ EV3onRulesでは、EV3wayを動作させるために最低限必要となる動�
 また、制御動作の変化をルールチェインとして実装しますので、動作の変更や機能の再利用も容易となっています。
 
 ## 動作環境
-EV3onRulesはWindowsのcygwinとMax OS Xで動作確認をしています。
-
-Linuxでも、おそらく動作すると思います。
+EV3onRulesはWindowsのcygwinとMax OS Xで動作確認をしています。  
+おそらく、Linuxでも動作すると思います。
 
 ## ダウンロード
 EV3onRulesはToppers/EV3RT上で動作します。
 
-まずは、Toppers/EV3RTのWebサイトからEV3RTをダウンロードし、EV3RTで開発できる環境を整えてください。
-
-次に、EV3onRulesをダウンロードします。
+- Toppers/EV3RTのWebサイトからEV3RTの開発環境をダウンロードしてください。  
+[Toppers/EV3RTのWebサイト](http://dev.toppers.jp/trac_user/ev3pf/wiki/WhatsEV3RT)
+- EV3onRulesをダウンロードしてください。  
 対応するEV3RTのバージョンが異なりますので、注意してください。
 
 ## 開発環境の構築
-ダウンロードしたEV3onRulesのアーカイブを任意のディレクトリに展開します。
+Toppers/EV3RTのWebサイトからダウンロードしたファイルを展開し、EV3RTでアプリケーションを開発できる環境を整えてください。
+開発環境の構築方法は[Toppers/EV3RTのWebサイト](http://dev.toppers.jp/trac_user/ev3pf/wiki/WhatsEV3RT)にしたがってください。
 
+次に、ダウンロードしたEV3onRulesのアーカイブを任意のディレクトリに展開します。
 このアーカイブを展開したディレクトリ内でプログラムを開発することになります。
 
 展開したファイルの中に「Makefile」が含まれています。
@@ -31,6 +32,9 @@ EV3onRulesはToppers/EV3RT上で動作します。
 ```
 EV3RT_DIR := /opt/hrp2
 ```
+
+上記の設定を行い、`make`コマンドを実行すると「何もしないアプリケーション」が構築されます。
+もし、アプリケーションの構築に失敗した場合、ここまでの設定のどれかが間違っていますので、修正してください。
 
 ## アプリケーションの開発
 プログラムを作成し、アプリケーションを構築します。
@@ -72,6 +76,9 @@ EV3onRulesのライセンスはGPL2.0となります。
 
 ## 免責事項
 EV3onRulesの開発者及び配布者は、EV3onRulesを使用することによって生じるいかなる損害に対しても一切責任を負いません。
+
+## 質問・バクレポートなど
+質問等がありましたら、開発者(武田敦志: takeda[at]cs.tohoku-gakuin.ac.jp)までお知らせください。
 
 ## 謝辞
 EV3onRulesは東北学院大学個別研究「物理シミュレータと自律ロボットを活用したソフトウェア開発教育に関する研究」の成果物の一部です。
