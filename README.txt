@@ -57,7 +57,7 @@ EV3onRulesはToppers/EV3RT上で動作します。
 Wikiのチュートリアル: https://github.com/takedarts/ev3onrules/wiki
 APIドキュメント: https://takedarts.github.io/ev3onrules/apidoc/1.0/
 
-次に、作成したプログラムをコンパイルし、アプリケーションを構築します。 
+次に、作成したプログラムをコンパイルし、アプリケーションを構築します。
 cygwin-terminalなどのコマンド入力画面から`make`を実行してください。 makeに
 成功すると、アプリケーションファイル「app」が生成されます。 これはEV3RTアプ
 リケーションとなっていますので、Toppers/EV3RTのWebサイトにある説明に従って
@@ -91,7 +91,7 @@ LEGO Mindstorms EV3にインストールしてください。
 ライセンス
 ----------
 
-EV3onRulesのライセンスはGPL2.0となります。 
+EV3onRulesのライセンスはGPL2.0となります。
 
 免責事項
 --------
@@ -102,8 +102,7 @@ EV3onRulesの開発者及び配布者は、EV3onRulesを使用することによ
 質問・バクレポートなど
 ----------------------
 
-質問等がありましたら、開発者(武田敦志)までお知らせください。
-連絡先: takeda@cs.tohoku-gakuin.ac.jp
+質問等がありましたら、開発者(武田敦志: takeda[at]cs.tohoku-gakuin.ac.jp)までお知らせください。
 
 謝辞
 ----
