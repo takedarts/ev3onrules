@@ -1,0 +1,27 @@
+diff -uprN ../ev3rt_b71.old/target/ev3_gcc/ev3.h ./target/ev3_gcc/ev3.h
+--- ../ev3rt_b71.old/target/ev3_gcc/ev3.h	2018-04-21 14:26:40.000000000 +0900
++++ ./target/ev3_gcc/ev3.h	2018-07-05 22:25:26.000000000 +0900
+@@ -79,8 +79,8 @@
+ /**
+  * Memory
+  */
+-#define KERNEL_HEAP_SIZE (1024 * 1024) //!< Heap size for dynamic memory allocation in TDOM_KERNEL
+-#define APP_HEAP_SIZE    (1024 * 1024) //!< Heap size for dynamic memory allocation in TDOM_APP
++#define KERNEL_HEAP_SIZE (4 * 1024 * 1024) //!< Heap size for dynamic memory allocation in TDOM_KERNEL
++#define APP_HEAP_SIZE    (4 * 1024 * 1024) //!< Heap size for dynamic memory allocation in TDOM_APP
+ 
+ /**
+  * Bluetooth configuration
+@@ -99,9 +99,9 @@
+ #define TMAX_APP_DTQ_NUM     (16)          //!< Maximum number of data queues in a loadable application module
+ #define TMAX_APP_PDQ_NUM     (16)          //!< Maximum number of priority data queues in a loadable application module
+ #define TMAX_APP_MTX_NUM     (16)          //!< Maximum number of mutexes in a loadable application module
+-#define TMAX_APP_TEXT_SIZE   (1024 * 1024) //!< Maximum size of the text section in a loadable application module
+-#define TMAX_APP_DATA_SIZE   (1024 * 1024) //!< Maximum size of the data section in a loadable application module
+-#define TMAX_APP_BINARY_SIZE (1024 * 1024) //!< Maximum size of a loadable application module's binary file
++#define TMAX_APP_TEXT_SIZE   (4 * 1024 * 1024) //!< Maximum size of the text section in a loadable application module
++#define TMAX_APP_DATA_SIZE   (4 * 1024 * 1024) //!< Maximum size of the data section in a loadable application module
++#define TMAX_APP_BINARY_SIZE (4 * 1024 * 1024) //!< Maximum size of a loadable application module's binary file
+ 
+ /**
+  * LCD configuration
