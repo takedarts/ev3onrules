@@ -42,11 +42,6 @@ bool Controller::run()
     return false;
   }
 
-  if (_initialize) {
-    _rule->init(_filterManager.get(), _deviceManager.get());
-    _initialize = false;
-  }
-
   // 実行ルールを確認
   uint32_t number = _rule->next(_filterManager.get(), _deviceManager.get());
 
@@ -59,6 +54,12 @@ bool Controller::run()
   // 対象ルールが無いなら終了
   if (_rule == nullptr) {
     return false;
+  }
+
+  // 初期化処理を実行
+  if (_initialize) {
+    _rule->init(_filterManager.get(), _deviceManager.get());
+    _initialize = false;
   }
 
   // ルール実行
